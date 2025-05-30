@@ -1,13 +1,18 @@
 # 🎨 Contrast Checker Tool
 
-A clean, simple tool that helps designers, developers, and accessibility professionals quickly test the contrast between text and background colors based on WCAG compliance standards. This lightweight tool provides real-time feedback on whether your color combinations meet **WCAG AA** or **AAA** contrast guidelines for legibility and accessibility.
+A clean, simple tool that helps designers, developers, and accessibility
+professionals quickly test the contrast between text and background colors based
+on WCAG compliance standards. This lightweight tool provides real-time feedback
+on whether your color combinations meet **WCAG AA** or **AAA** contrast
+guidelines for legibility and accessibility.
 
 ---
 
 ## ✨ Features
 
 - ✅ **WCAG AA/AAA Compliance Check**  
-  Instantly check if your foreground and background color pair passes accessibility contrast thresholds.
+  Instantly check if your foreground and background color pair passes
+  accessibility contrast thresholds.
 
 - 🎛️ **Color Pickers for Text & Background**  
   Choose any color using native HTML5 color inputs.
@@ -19,10 +24,12 @@ A clean, simple tool that helps designers, developers, and accessibility profess
   One-click copy to easily grab your selected HEX codes for development use.
 
 - 🔎 **Check Contrast Button**  
-  Manual trigger to validate the current color combo — useful when fine-tuning your palette.
+  Manual trigger to validate the current color combo — useful when fine-tuning
+  your palette.
 
 - 🌗 **Light & Dark Mode Design Ready**  
-  Designed to be easily theme-switchable, with simple aesthetics in both light and dark modes.
+  Designed to be easily theme-switchable, with simple aesthetics in both light
+  and dark modes.
 
 - 📱 **Responsive Layout**  
   Available for Desktop, Tablet, and Mobile screen sizes.
@@ -51,12 +58,12 @@ A clean, simple tool that helps designers, developers, and accessibility profess
 
 ## 🙌 Contributions
 
-Contributions are welcome!
-Feel free to submit issues or pull requests if you have ideas or improvements.
-
+Contributions are welcome! Feel free to submit issues or pull requests if you
+have ideas or improvements.
 
 ---
 
 ## Connect With Me
+
 - [linkedIn] <https://linkedin.com/in/princeakakpo>
-- [X/Twitter] <https://twitter.com/thesyntaxdude> 
+- [X/Twitter] <https://twitter.com/thesyntaxdude>

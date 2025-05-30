@@ -203,6 +203,7 @@ footer a {
     main {
         display: none;
     }
+
     footer {
         display: flex;
         flex-direction: column;
@@ -210,9 +211,8 @@ footer a {
         justify-content: center;
         height: 100vh;
     }
-    footer img{
-        
-    }
+
+    footer img {}
 
     .mobile {
         display: block;
