@@ -1,34 +1,104 @@
-*, ::before, ::after{
+
+
+*,
+::before,
+::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-img{
+img {
     display: block;
     max-width: 100%;
 }
-:root {
-    color-scheme: light dark;
-    /* light mode color scheme */
-    --bg-light: #F9F9F9;
-    --primary-card-light: #fff;
-    --secondary-card-light: #f2f2f7;
-    --border-light: #d1d1d6;
-    --primary-text-light: #1c1c1e;
-    --secondary-text-light: #3a3a3c;
-    --accent-color-light: #007aff;
-    --shadow-color-light: rgba(0, 0, 0, 0.05);
-
-    /* dark mode color scheme */
-    --bg-dark: #1c1c1e;
-    --primary-card-dark: #2c2c2e;
-    --secondary-card-dark: #3a3a3c;
-    --border-dark: #48484a;
-    --primary-text-dark: #fff;
-    --secondary-text-dark: #d1d1d6;
-    --accent-color-dark: #0a84ff;
-    --shadow-color-dark: rgba(0, 0, 0, 0.25);
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
-@media (prefers-color-scheme: dark) {}
+:root {
+    /* light mode color scheme */
+    /* color-scheme: light dark; */
+    --bg-color: #F9F9F9;
+    --primary-card-color: #fff;
+    --secondary-card-color: #f2f2f7;
+    --border-color: #d1d1d6;
+    --primary-text-color: #1c1c1e;
+    --secondary-text-color: #3a3a3c;
+    --accent-color: #007aff;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+/* @media (prefers-color-scheme: dark) { 
+    :root {
+        darkmodecolorscheme: auto;
+        color-scheme: light dark;
+        --bg-color: #1c1c1e;
+        --primary-card-color: #2c2c2e;
+        --secondary-card-color: #3a3a3c;
+        --border-color: #48484a;
+        --primary-text-color: #fff;
+        --secondary-text-color: #d1d1d6;
+        --accent-color: #0a84ff;
+        --shadow-color: rgba(0, 0, 0, 0.25);
+    }
+}*/
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'Inter';
+}
+
+header {
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-block: 0.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    max-height: 0.5em;
+    padding-block: 3em;
+    margin-inline: auto;
+    font-weight: bold;
+}
+
+nav img {
+    width: 10em;
+    object-fit: contain;
+}
+
+nav p{
+    color: var(--primary-text-color);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    flex: 1;
+    margin-left: 3.5em;
+}
+
+.navlist{
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+}
+
+.navlist li{
+    background-color: var(--border-color);
+    padding: 0.8em 1em;
+    border-radius: 50%;
+    opacity: 0.9;
+
+    &:hover{
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
 
