@@ -10,10 +10,11 @@
 </head>
 
 <body>
+
     <header>
         <nav id="navbar">
             <img src="assets/images/syntrast-logo.webp" alt="syntrast color checker">
-            <p>Color Contrast Checker</p>
+            <h1>Color Contrast Checker</h1>
             <ul class="navlist">
                 <li><i class="fa-solid fa-moon"></i></li>
                 <li><i class="fa-solid fa-question"></i></li>
@@ -21,8 +22,31 @@
         </nav>
     </header>
 
-
-
+    <main class="primary-wrapper">
+        <form action="#" method="POST" id="color-selector">
+            <div class="flex-wrapper">
+                <fieldset>
+                    <label for="text-color">Text Color:</label>
+                    <input type="color" id="text-color" name="text-color" value="#3a3a3c">
+                </fieldset>
+                <fieldset>
+                    <label for="background-color">Background Color:</label>
+                    <input type="color" id="background-color" name="background-color" value="#009acf">
+                </fieldset>
+            </div>
+        </form>
+        <p class="sample-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+        <!-- Need JS to add the functionality here -->
+        <h2 class="results">WCAG: <span>{✅ AAA Compliant / ✔️ AA Compliant / 🤮 Brother Ugh ... What was that?}</span>
+        </h2>
+        <div class="btn-wrapper">
+            <button class="btn" type="submit">Check Contrast</button>
+            <button class="btn" type="submit">Copy HEX</button>
+            <button class="btn" type="submit">Swap Colors</button>
+        </div>
+    </main>
 
 
     <script src="https://kit.fontawesome.com/7b2c76b823.js" crossorigin="anonymous"></script>
