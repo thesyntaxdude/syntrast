@@ -22,39 +22,40 @@
             </ul>
         </nav>
     </header>
+    <div class="main-container">
+        <main class="primary-wrapper">
+            <form action="#" method="POST" id="color-selector">
+                <div class="flex-wrapper">
+                    <fieldset>
+                        <label for="text-color">Text Color:</label>
+                        <input type="color" id="text-color" name="text-color" value="#fa3f3c">
+                    </fieldset>
+                    <fieldset>
+                        <label for="background-color">Background Color:</label>
+                        <input type="color" id="background-color" name="background-color" value="#009acf">
+                    </fieldset>
+                </div>
+            </form>
+            <p class="sample-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </p>
 
-    <main class="primary-wrapper">
-        <form action="#" method="POST" id="color-selector">
-            <div class="flex-wrapper">
-                <fieldset>
-                    <label for="text-color">Text Color:</label>
-                    <input type="color" id="text-color" name="text-color" value="#fa3f3c">
-                </fieldset>
-                <fieldset>
-                    <label for="background-color">Background Color:</label>
-                    <input type="color" id="background-color" name="background-color" value="#009acf">
-                </fieldset>
+            <!-- TODO: Need JS to add the functionality here -->
+
+            <h2 class="results">WCAG: <span>{✅ AAA Compliant / ✔️ AA Compliant / 🤮 Brother Ugh ... What was
+                    that?}</span>
+            </h2>
+            <div class="btn-wrapper">
+                <button class="btn" type="submit">Check Contrast</button>
+                <button class="btn" type="submit">Copy HEX</button>
+                <button class="btn" type="submit">Swap Colors</button>
             </div>
-        </form>
-        <p class="sample-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        </p>
-
-        <!-- TODO: Need JS to add the functionality here -->
-
-        <h2 class="results">WCAG: <span>{✅ AAA Compliant / ✔️ AA Compliant / 🤮 Brother Ugh ... What was that?}</span>
-        </h2>
-        <div class="btn-wrapper">
-            <button class="btn" type="submit">Check Contrast</button>
-            <button class="btn" type="submit">Copy HEX</button>
-            <button class="btn" type="submit">Swap Colors</button>
-        </div>
 
 
-        <!-- Mobile UnderConstruction "Feature" -->
+            <!-- Mobile UnderConstruction "Feature" -->
 
-    </main>
-
+        </main>
+    </div>
     <footer>
         <div class="mobile" aria-hidden="true">
             <img src="assets/images/undraw_under-construction_c2y1.svg"
