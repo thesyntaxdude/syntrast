@@ -32,3 +32,9 @@ function getLuminance(red, green, blue){
     const luminance = (0.2126 * red) + (0.7152 * green) + (0.0722 * blue);
     return luminance;
 }
+
+function getContrastRatio(lum1, lum2){
+    let lighter = Math.max(lum1, lum2);
+    let darker = Math.min(lum1, lum2);
+    return (lighter + 0.05) / (darker + 0.05); // Adding "0.05" to prevent potentially dividng by 0. Also provided by W3 WCAG 2.1 Guidelines.
+}
