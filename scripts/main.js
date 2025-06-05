@@ -17,14 +17,13 @@ function hexToRgb(hex) {
 }
 
 function getSrgb(color) {
+  // this function converts the values of its arguments into sRGB.
+  // using values provided by the W3 WCAG 2.1 Contrast Guidelines.
     return (color =
     color <= 0.04045 ? color / 12.92 : ((color + 0.055) / 1.055) ** 2.4);
 }
 
 function getLuminance(red, green, blue){
-    // this function converts the values of its arguments into sRGB.
-    // using values provided by the W3 WCAG 2.1 Contrast Guidelines. 
-
     red /= 255;
     green /= 255;
     blue /= 255;
