@@ -1,5 +1,7 @@
 // let hex = prompt("Enter a Hex Value: ", "");
 
+//          CHECK CONTRAST BUTTON
+
 function hexToRgb(hex) {
     hex = hex.substring(1);
     if (hex.length === 3) {
@@ -36,9 +38,6 @@ function getLuminance(red, green, blue){
     const luminance = (0.2126 * red) + (0.7152 * green) + (0.0722 * blue);
     return luminance;
 }
-
-
-
 
 function getContrastRatio(lum1, lum2){
     let lighter = Math.max(lum1, lum2);
