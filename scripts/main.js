@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ".btn-wrapper .btn:nth-child(1)"
   );
   const copyHexBtn = document.querySelector(".btn-wrapper .btn:nth-child(2)");
+  const swapColorsBtn = document.querySelector(
+    ".btn-wrapper .btn:nth-child(3)"
+  );
 
   function updateSampleText() {
     sampleText.style.color = textColorInput.value;
@@ -76,7 +79,14 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       copyHexBtn.textContent = "Copy HEX";
       copyHexBtn.style.backgroundColor = "var(--accent-color)";
-    }, 1000);
+    }, 400);
+  }
+
+  function swapColors() {
+    const tempColor = textColorInput.value;
+    textColorInput.value = bgColorInput.value;
+    bgColorInput.value = tempColor;
+    updateSampleText();
   }
 
   textColorInput.addEventListener("input", updateSampleText);
@@ -88,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   copyHexBtn.addEventListener("click", copyHexValues);
+  swapColorsBtn.addEventListener("click", swapColors);
 
   updateSampleText();
 });
