@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const swapColorsBtn = document.querySelector(
     ".btn-wrapper .btn:nth-child(3)"
   );
+  const modeToggle = document.querySelector(".fa-moon");
 
   function updateSampleText() {
     sampleText.style.color = textColorInput.value;
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       copyHexBtn.textContent = "Copy HEX";
       copyHexBtn.style.backgroundColor = "var(--accent-color)";
-    }, 400);
+    }, 1000);
   }
 
   function swapColors() {
@@ -89,16 +90,21 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSampleText();
   }
 
+  function toggleMode() {
+    document.body.classList.toggle("light-mode");
+    modeToggle.classList.toggle("fa-sun");
+    modeToggle.classList.toggle("fa-moon");
+  }
+
   textColorInput.addEventListener("input", updateSampleText);
   bgColorInput.addEventListener("input", updateSampleText);
-
   checkContrastBtn.addEventListener("click", () => {
     const result = checkContrast(textColorInput.value, bgColorInput.value);
     resultSpan.textContent = result;
   });
-
   copyHexBtn.addEventListener("click", copyHexValues);
   swapColorsBtn.addEventListener("click", swapColors);
+  modeToggle.addEventListener("click", toggleMode);
 
   updateSampleText();
 });
