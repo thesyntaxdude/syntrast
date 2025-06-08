@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkContrastBtn = document.querySelector(
     ".btn-wrapper .btn:nth-child(1)"
   );
+  const copyHexBtn = document.querySelector(".btn-wrapper .btn:nth-child(2)");
 
   function updateSampleText() {
     sampleText.style.color = textColorInput.value;
@@ -67,6 +68,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function copyHexValues() {
+    const hexValues = `${textColorInput.value},${bgColorInput.value}`;
+    navigator.clipboard.writeText(hexValues);
+    copyHexBtn.textContent = "Copied!";
+    copyHexBtn.style.backgroundColor = "#28a745";
+    setTimeout(() => {
+      copyHexBtn.textContent = "Copy HEX";
+      copyHexBtn.style.backgroundColor = "var(--accent-color)";
+    }, 1000);
+  }
+
   textColorInput.addEventListener("input", updateSampleText);
   bgColorInput.addEventListener("input", updateSampleText);
 
@@ -74,6 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const result = checkContrast(textColorInput.value, bgColorInput.value);
     resultSpan.textContent = result;
   });
+
+  copyHexBtn.addEventListener("click", copyHexValues);
 
   updateSampleText();
 });
