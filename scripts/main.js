@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ".btn-wrapper .btn:nth-child(3)"
   );
   const modeToggle = document.querySelector(".fa-moon");
+  const helpToggle = document.querySelector(".fa-question");
+  const modal = document.querySelector(".modal");
+  const closeModalBtn = document.querySelector(".close-modal");
 
   function updateSampleText() {
     sampleText.style.color = textColorInput.value;
@@ -96,6 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
     modeToggle.classList.toggle("fa-moon");
   }
 
+  function toggleModal() {
+    modal.classList.toggle("active");
+  }
+
   textColorInput.addEventListener("input", updateSampleText);
   bgColorInput.addEventListener("input", updateSampleText);
   checkContrastBtn.addEventListener("click", () => {
@@ -105,6 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
   copyHexBtn.addEventListener("click", copyHexValues);
   swapColorsBtn.addEventListener("click", swapColors);
   modeToggle.addEventListener("click", toggleMode);
+  helpToggle.addEventListener("click", toggleModal);
+  closeModalBtn.addEventListener("click", toggleModal);
 
   updateSampleText();
 });
