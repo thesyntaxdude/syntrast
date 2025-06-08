@@ -20,7 +20,6 @@ a {
     color: inherit;
 }
 
-
 :root {
     /* dark mode color scheme */
     --bg-color: #1c1c1e;
@@ -34,20 +33,17 @@ a {
     --white: #fff;
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        color-scheme: light dark;
-        /* light mode color scheme */
-        --bg-color: #F9F9F9;
-        --primary-card-color: #fff;
-        --secondary-card-color: #f2f2f7;
-        --border-color: #d1d1d6;
-        --primary-text-color: #1c1c1e;
-        --secondary-text-color: #3a3a3c;
-        --accent-color: #f25015;
-        --shadow-color: rgba(0, 0, 0, 0.05);
-        --white: #fff;
-    }
+body.light-mode {
+    /* light mode color scheme */
+    --bg-color: #F9F9F9;
+    --primary-card-color: #fff;
+    --secondary-card-color: #f2f2f7;
+    --border-color: #8b8b90;
+    --primary-text-color: #1c1c1e;
+    --secondary-text-color: #3a3a3c;
+    --accent-color: #f25015;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --white: #fff;
 }
 
 body {
@@ -108,7 +104,7 @@ nav h1 {
     }
 }
 
-.main-container{
+.main-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,7 +131,6 @@ nav h1 {
     margin-bottom: 0.5em;
     color: var(--secondary-text-color);
 }
-
 
 fieldset {
     border: none;
@@ -202,8 +197,6 @@ footer a {
     display: none;
 }
 
-/* Mobile UnderConstruction "Feature" */
-
 @media screen and (max-width: 806px) {
 
     header,
@@ -218,7 +211,6 @@ footer a {
         justify-content: center;
         height: 100vh;
     }
-
 
     .mobile {
         display: block;
