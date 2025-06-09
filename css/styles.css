@@ -356,7 +356,9 @@ footer a {
     }
 
     .btn-wrapper {
-        gap: 0.3em;
+        flex-direction: column;
+        max-width: 50%;
+        margin-inline: auto;
     }
 
     .modal-content {
